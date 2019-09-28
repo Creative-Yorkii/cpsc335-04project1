@@ -1,8 +1,12 @@
+//  Author: ANTHONY GOOSSENS
+//  Email: yorkii@csu.fullerton.edu
 //  Draw-Stuff's purpose is to draw the grid and set cases for each cell.
+//  No algorithms are located here. Just functions and there definitions.
 //  This this resource file is to be called by main.html.
 
 
 // Set Value Cases for each cell and default values
+// draw_rect decides what value a cell has bases on 'color'
 
 function draw_rect( ctx, drawX, drawY, stroke, state )
 {
@@ -19,12 +23,13 @@ function draw_rect( ctx, drawX, drawY, stroke, state )
       break;
     }
 
-	// Setting default values 
+	// Setting default values for the state of the cell
     
     state = state || 0;
     stroke = stroke || 'lightgrey';
 
-	// Setting Cell Values and width / height	
+	// Setting Cell Values and width / height
+	// Creating and giving the cells a width and height
 
     ctx.save( );
     ctx.strokeStyle = stroke;
@@ -40,6 +45,7 @@ function draw_rect( ctx, drawX, drawY, stroke, state )
 
 	// Function draw_grid draws and creates the grid for our ant.
 	// This function's logic is dervived from codereview's grid algorithm
+	// The algorithm stops after the grid is completed and is only called once
 
 function draw_grid( rctx, rminor, rmajor, rstroke, rfill  )
 {
