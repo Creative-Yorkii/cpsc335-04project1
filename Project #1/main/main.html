@@ -1,3 +1,12 @@
+//  Author: ANTHONY GOOSSENS
+//  Email: yorkii@csu.fullerton.edu
+//  This main.html is used to create the html and call all functions derived in assets folder
+//  All loops and algorithms are called here for the ant to travel.
+//  This code is dervied from the professors given code. I simply added the function calls and added my information
+
+
+// Create the html and set names and headers
+// Script also calls styles.css from assets folder to center the grid and colors
 <!doctype html>
 <html>
 
@@ -12,6 +21,7 @@
     <canvas id="grid" width="500" height="500"></canvas>
   </body>
 
+// Script calles the assets folder and draw-stuff.js file
 <script src="../assets/draw-stuff.js"></script>
 <script>
 function draw_title( context )
@@ -24,6 +34,7 @@ function draw_title( context )
 }
 
 // Main
+// Calls function from assets folder and creates and names the grid.
   var canvas = document.getElementById( "grid" );
   var context = canvas.getContext( "2d" );
   var drawX = 0;
@@ -41,6 +52,7 @@ function draw_title( context )
   }, 800)
 
 // Draw a grid
+// Draw_grid is a function located in the assets folder under draw-stuff.js which defines it
 
   draw_grid( context, 10, 50, 'white', 'yellow' );
   draw_title( context );
